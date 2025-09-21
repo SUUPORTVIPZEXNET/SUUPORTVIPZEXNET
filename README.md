@@ -10,7 +10,7 @@
 <div class="content">
   <div class="section">
     <h1>🌟 About Me</h1>
-    <h2>👋 Hi! I'm Alessandro</h2>
+    <h2>👋 Hi! I'm Mahdi shami</h2>
     <ul>
       <li>💻 Developer at <strong>VIPZEXNET</strong>, passionate about modern digital solutions.</li>
       <li>🛠 Expertise:</li>
