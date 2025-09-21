@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me</title>
+<title>About Me - Alessandro</title>
 <style>
   body {
     margin: 0;
     overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f0f0f0;
-    background: black;
+    color: #e0e0e0;
+    background: #0a0a0a;
     position: relative;
   }
 
@@ -33,15 +33,15 @@
     color: #ffffff;
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-shadow: 0 0 10px #ffffff60;
+    text-shadow: 0 0 12px #ffffff80;
     text-align: left;
   }
 
   h2 {
-    color: #f5f5f5;
+    color: #f0f0f0;
     font-size: 1.8em;
     margin-bottom: 20px;
-    text-shadow: 0 0 6px #ffffff50;
+    text-shadow: 0 0 8px #ffffff60;
     text-align: left;
   }
 
@@ -51,7 +51,7 @@
   }
 
   ul li {
-    color: #e0e0e0;
+    color: #d0d0d0;
     font-size: 1.2em;
     margin-bottom: 12px;
     line-height: 1.6;
@@ -65,13 +65,13 @@
   .tech-stack img {
     margin: 5px;
     border-radius: 6px;
-    height: 35px;
-    transition: transform 0.2s;
+    height: 40px;
+    transition: transform 0.3s;
     vertical-align: middle;
   }
 
   .tech-stack img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 </style>
 </head>
@@ -84,8 +84,8 @@
     <h1>🌟 About Me</h1>
     <h2>👋 Hi! I'm Alessandro</h2>
     <ul>
-      <li>💻 I'm a developer at VIPZEXNET, passionate about creating modern digital solutions.</li>
-      <li>🛠 My expertise includes:</li>
+      <li>💻 Developer at <strong>VIPZEXNET</strong>, passionate about modern digital solutions.</li>
+      <li>🛠 Expertise:</li>
       <ul>
         <li>🌐 Website Design & Web Server Development</li>
         <li>📱 App Design & Bot Creation</li>
@@ -114,21 +114,21 @@
 
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   const fontSize = 16;
-  const columns = canvas.width / fontSize;
+  const columns = Math.floor(canvas.width / fontSize);
   const drops = [];
-  for(let x=0; x<columns; x++) drops[x] = Math.random()*canvas.height;
+  for(let x=0; x<columns; x++) drops[x] = Math.random() * canvas.height;
 
   function draw() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#00ff99';
+    ctx.fillStyle = '#00ffcc';
     ctx.font = fontSize + "px monospace";
 
     for(let i=0; i<drops.length; i++) {
       const text = letters.charAt(Math.floor(Math.random() * letters.length));
-      ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
       drops[i]++;
-      if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+      if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
     }
   }
 
