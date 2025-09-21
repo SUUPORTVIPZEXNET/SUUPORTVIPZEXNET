@@ -7,41 +7,29 @@
 <style>
   body {
     margin: 0;
-    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #e0e0e0;
-    background: #0a0a0a;
+    color: #2c3e50;
+    background: #f7f7f7;
     position: relative;
-  }
-
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
   }
 
   .content {
-    position: relative;
-    z-index: 2;
-    padding: 40px 20px;
     max-width: 900px;
-    margin: auto;
+    margin: 50px auto;
+    padding: 20px;
   }
 
   h1 {
-    color: #ffffff;
+    color: #34495e;
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-shadow: 0 0 12px #ffffff80;
     text-align: left;
   }
 
   h2 {
-    color: #f0f0f0;
+    color: #2c3e50;
     font-size: 1.8em;
     margin-bottom: 20px;
-    text-shadow: 0 0 8px #ffffff60;
     text-align: left;
   }
 
@@ -51,11 +39,10 @@
   }
 
   ul li {
-    color: #d0d0d0;
+    color: #2c3e50;
     font-size: 1.2em;
     margin-bottom: 12px;
     line-height: 1.6;
-    text-align: left;
   }
 
   .section {
@@ -76,8 +63,6 @@
 </style>
 </head>
 <body>
-
-<canvas id="matrix"></canvas>
 
 <div class="content">
   <div class="section">
@@ -105,40 +90,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  const canvas = document.getElementById("matrix");
-  const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  const fontSize = 16;
-  const columns = Math.floor(canvas.width / fontSize);
-  const drops = [];
-  for(let x=0; x<columns; x++) drops[x] = Math.random() * canvas.height;
-
-  function draw() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#00ffcc';
-    ctx.font = fontSize + "px monospace";
-
-    for(let i=0; i<drops.length; i++) {
-      const text = letters.charAt(Math.floor(Math.random() * letters.length));
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      drops[i]++;
-      if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-    }
-  }
-
-  setInterval(draw, 50);
-
-  window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
-</script>
 
 </body>
 </html>
