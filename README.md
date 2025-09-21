@@ -4,63 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Me - Alessandro</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #2c3e50;
-    background: #f7f7f7;
-    position: relative;
-  }
-
-  .content {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-  }
-
-  h1 {
-    color: #34495e;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-
-  h2 {
-    color: #2c3e50;
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-
-  ul {
-    padding-left: 20px;
-    list-style: none;
-  }
-
-  ul li {
-    color: #2c3e50;
-    font-size: 1.2em;
-    margin-bottom: 12px;
-    line-height: 1.6;
-  }
-
-  .section {
-    margin-bottom: 50px;
-  }
-
-  .tech-stack img {
-    margin: 5px;
-    border-radius: 6px;
-    height: 40px;
-    transition: transform 0.3s;
-    vertical-align: middle;
-  }
-
-  .tech-stack img:hover {
-    transform: scale(1.2);
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
